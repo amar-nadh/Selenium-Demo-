@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Log Suite Example" verbose="1">
+
+<listeners>
+		<!-- listener class-name="WebDriver.TestNg.ListenerClass" / --> 
+		<listener class-name="WebDriver.TestNg.RetryListener"/>
+		<listener class-name="WebDriver.TestNg.TestListener"/>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  
+</listeners>
+
+<test name="TestNG logs sample" preserve-order="true">
+		<classes>
+			<class name="WebDriver.TestNg.RetryFailedTestCases"> </class>
+		</classes>
+	</test>
+
+</suite>
+
